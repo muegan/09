@@ -6,15 +6,20 @@
 
 int main(int argc, char *argv[]) {
 	
-	int i;
+	int i, average;
+	int sum;
 	int grade[SIZE];
-	printf("5명의 점수를 입력하세요.\n");
 	
+	sum=0;
 	for(i=0;i<SIZE;i++)
+	{
+		printf("input 5 scores:");
 		scanf("%d",&grade[i]);
-		
-	for(i=0;i<SIZE;i++)
-		printf("grade[%d]=%d\n",i,grade[i]);
+		sum+=grade[i];
+	
+		}
+	average=sum/SIZE;
+	printf("score average:%d\n",average);
 		
 	return 0;
 }
